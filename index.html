@@ -61,7 +61,270 @@
 
 
     <section id="Samples" class="bg-light">
-      
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-13 mx-auto">
+            <h2>Overview of the model</h2>
+
+            <p class="lead" align="justify">
+                We present here a MusicGen model that handles style and text conditioning. The style conditioner uses a few seconds audio excerpt as a condition and allows the model to generate music that is similar to it. Our model is trained on 30 seconds which means that we can sample up to 30 seconds long excerpt.
+                We can use the style conditioner by itself, or combine it with the text conditioner. Here are some examples of music generated with the style conditioner only: 
+
+                <table>
+                      
+                  <tbody>
+                    <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
+                      <td colspan="3" style="text-align: center; font-weight: bold;"> </td>
+                    </tr>
+                      <tr>
+                        <th>Style Condition</th>
+                        <th>Ex. 1</th>
+                        <th>Ex. 2</th>
+                      </tr>
+          
+                              
+                      <tr style="border-top:1px solid black">
+                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                          <source src="src/samples/section1_0/cond.mp3" type="audio/wav"></audio></td>
+                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                          <source src="src/samples/section1_0/0.mp3" type="audio/wav"></audio></td>
+                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                            <source src="src/samples/section1_0/1.mp3" type="audio/wav"></audio></td>
+                          </tr>
+                          <tr style="border-top:1px solid black">
+                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                              <source src="src/samples/section1_1/cond.mp3" type="audio/wav"></audio></td>
+                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                              <source src="src/samples/section1_1/0.mp3" type="audio/wav"></audio></td>
+                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                <source src="src/samples/section1_1/1.mp3" type="audio/wav"></audio></td>
+                              </tr>
+                              <tr style="border-top:1px solid black">
+                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="src/samples/section1_2/cond.mp3" type="audio/wav"></audio></td>
+                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="src/samples/section1_2/0.mp3" type="audio/wav"></audio></td>
+                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="src/samples/section1_2/1.mp3" type="audio/wav"></audio></td>
+                                  </tr>
+    
+                        </tbody>
+                      </table>
+                    We can use it as well to generate variations of drums beats:
+
+                    <table>
+                      
+                      <tbody>
+                        <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
+                          <td colspan="6" style="text-align: center; font-weight: bold;"> </td>
+                        </tr>
+                          <tr>
+                            <th>Style Condition</th>
+                            <th>Ex. 1</th>
+                            <th>Ex. 2</th>
+                            <th>Ex. 3</th>
+                            <th>Ex. 4</th>
+                            <th>Ex. 5</th>
+                          </tr>
+              
+                                  
+                          <tr style="border-top:1px solid black">
+                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                              <source src="src/samples/drums_1/cond.mp3" type="audio/wav"></audio></td>
+                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                              <source src="src/samples/drums_1/1.mp3" type="audio/wav"></audio></td>
+                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                <source src="src/samples/drums_1/2.mp3" type="audio/wav"></audio></td>
+                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="src/samples/drums_1/3.mp3" type="audio/wav"></audio></td>
+                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="src/samples/drums_1/4.mp3" type="audio/wav"></audio></td>
+                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                      <source src="src/samples/drums_1/5.mp3" type="audio/wav"></audio></td>
+                                          </tr>
+                              <tr style="border-top:1px solid black">
+                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="src/samples/drums_2/cond.mp3" type="audio/wav"></audio></td>
+                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                  <source src="src/samples/drums_2/1.mp3" type="audio/wav"></audio></td>
+                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="src/samples/drums_2/2.mp3" type="audio/wav"></audio></td>
+                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                      <source src="src/samples/drums_2/3.mp3" type="audio/wav"></audio></td>
+                                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                        <source src="src/samples/drums_2/4.mp3" type="audio/wav"></audio></td>
+    
+                                  </tr>
+                                  <tr style="border-top:1px solid black">
+                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                      <source src="src/samples/drums_3/cond.mp3" type="audio/wav"></audio></td>
+                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                      <source src="src/samples/drums_3/1.mp3" type="audio/wav"></audio></td>
+                                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                        <source src="src/samples/drums_3/2.mp3" type="audio/wav"></audio></td>
+                                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                          <source src="src/samples/drums_3/3.mp3" type="audio/wav"></audio></td>
+                                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                            <source src="src/samples/drums_3/4.mp3" type="audio/wav"></audio></td>
+                                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                              <source src="src/samples/drums_3/5.mp3" type="audio/wav"></audio></td>
+                                          </tr>
+        
+                            </tbody>
+                          </table>
+                          Thanks to a Double Classifier Free Guidance (see down on the page for more explanations), we can mix textual and style conditions that are not aligned. All of the samples use \( \alpha=3 \) and \( \beta=6 \)
+                          <table>
+                      
+                            <tbody>
+                              <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
+                                <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "Rock opera with drums bass and an electric guitar. Epic feeling"</td>
+                              </tr>
+                                <tr>
+                                  <th>Style Condition</th>
+                                  <th>Ex. 1</th>
+                                  <th>Ex. 2</th>
+                                  <th>Ex. 3</th>
+                                  <th>Ex. 4</th>
+                                </tr>
+                    
+                                        
+                                <tr style="border-top:1px solid black">
+                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="src/samples/rock_opera/cond.mp3" type="audio/wav"></audio></td>
+                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                    <source src="src/samples/rock_opera/1.mp3" type="audio/wav"></audio></td>
+                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                      <source src="src/samples/rock_opera/2.mp3" type="audio/wav"></audio></td>
+                                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                        <source src="src/samples/rock_opera/3.mp3" type="audio/wav"></audio></td>
+                                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                          <source src="src/samples/rock_opera/4.mp3" type="audio/wav"></audio></td>
+                        
+                                  </tbody>
+                                </table>
+                                <table>
+                                          
+                                  <tbody>
+                                    <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
+                                      <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "Chill lofi remix"</td>
+                                    </tr>
+                                      <tr>
+                                        <th>Style Condition</th>
+                                        <th>Ex. 1</th>
+                                        <th>Ex. 2</th>
+                                        <th>Ex. 3</th>
+                                        <th>Ex. 4</th>
+                                      </tr>
+                          
+                                              
+                                      <tr style="border-top:1px solid black">
+                                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                          <source src="src/samples/lofi_remix/cond.mp3" type="audio/wav"></audio></td>
+                                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                          <source src="src/samples/lofi_remix/1.mp3" type="audio/wav"></audio></td>
+                                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                            <source src="src/samples/lofi_remix/2.mp3" type="audio/wav"></audio></td>
+                                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                              <source src="src/samples/lofi_remix/3.mp3" type="audio/wav"></audio></td>
+                                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                <source src="src/samples/lofi_remix/4.mp3" type="audio/wav"></audio></td>
+                              
+                                        </tbody>
+                                      </table>
+                    
+                                      <table>
+                                          
+                                        <tbody>
+                                          <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
+                                            <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "8-bit old video game music"</td>
+                                          </tr>
+                                            <tr>
+                                              <th>Style Condition</th>
+                                              <th>Ex. 1</th>
+                                              <th>Ex. 2</th>
+                                              <th>Ex. 3</th>
+                                              <th>Ex. 4</th>
+                                            </tr>
+                                
+                                                    
+                                            <tr style="border-top:1px solid black">
+                                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                <source src="src/samples/8bit/cond.mp3" type="audio/wav"></audio></td>
+                                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                <source src="src/samples/8bit/1.mp3" type="audio/wav"></audio></td>
+                                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                  <source src="src/samples/8bit/2.mp3" type="audio/wav"></audio></td>
+                                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                    <source src="src/samples/8bit/3.mp3" type="audio/wav"></audio></td>
+                                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                      <source src="src/samples/8bit/4.mp3" type="audio/wav"></audio></td>
+                                    
+                                              </tbody>
+                                            </table>
+                          
+                                            <table>
+                                          
+                                              <tbody>
+                                                <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
+                                                  <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "Indian music with traditional instruments"</td>
+                                                </tr>
+                                                  <tr>
+                                                    <th>Style Condition</th>
+                                                    <th>Ex. 1</th>
+                                                    <th>Ex. 2</th>
+                                                    <th>Ex. 3</th>
+                                                    <th>Ex. 4</th>
+                                                  </tr>
+                                      
+                                                          
+                                                  <tr style="border-top:1px solid black">
+                                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                      <source src="src/samples/indian/cond.mp3" type="audio/wav"></audio></td>
+                                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                      <source src="src/samples/indian/1.mp3" type="audio/wav"></audio></td>
+                                                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                        <source src="src/samples/indian/2.mp3" type="audio/wav"></audio></td>
+                                                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                          <source src="src/samples/indian/3.mp3" type="audio/wav"></audio></td>
+                                                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                            <source src="src/samples/indian/4.mp3" type="audio/wav"></audio></td>
+                                          
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                          
+                                                    <tbody>
+                                                      <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
+                                                        <td colspan="6" style="text-align: center; font-weight: bold;"> Textual description: "80s New Wave with synthesizer"</td>
+                                                      </tr>
+                                                        <tr>
+                                                          <th>Style Condition</th>
+                                                          <th>Ex. 1</th>
+                                                          <th>Ex. 2</th>
+                                                          <th>Ex. 3</th>
+                                                          <th>Ex. 4</th>
+                                                          <th>Ex. 5</th>
+                                                        </tr>
+                                            
+                                                                
+                                                        <tr style="border-top:1px solid black">
+                                                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                            <source src="src/samples/indian/cond.mp3" type="audio/wav"></audio></td>
+                                                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                            <source src="src/samples/newwave/1.mp3" type="audio/wav"></audio></td>
+                                                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                              <source src="src/samples/newwave/2.mp3" type="audio/wav"></audio></td>
+                                                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                                <source src="src/samples/newwave/3.mp3" type="audio/wav"></audio></td>
+                                                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                                  <source src="src/samples/newwave/4.mp3" type="audio/wav"></audio></td>
+                                                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
+                                                                    <source src="src/samples/newwave/5.mp3" type="audio/wav"></audio></td>
+                                                  
+                                                          </tbody>
+                                                        </table>
+                Now, we provide some excerpts to illustrate the tables in the paper:
       <div class="container">
         <div class="row">
           <div class="col-lg-13 mx-auto">
@@ -707,156 +970,7 @@
 
       We notice that for low values of \( \beta \), there is almost no drums and bass (the textual description is ignored). For high values of \( \beta \) the quality of the music decreases and the textual description is favored. 
 
-      <table>
-                      
-        <tbody>
-          <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
-            <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "Rock opera with drums bass and an electric guitar. Epic feeling"</td>
-          </tr>
-            <tr>
-              <th>Style Condition</th>
-              <th>Ex. 1</th>
-              <th>Ex. 2</th>
-              <th>Ex. 3</th>
-              <th>Ex. 4</th>
-            </tr>
-
-                    
-            <tr style="border-top:1px solid black">
-              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                <source src="src/samples/rock_opera/cond.mp3" type="audio/wav"></audio></td>
-              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                <source src="src/samples/rock_opera/1.mp3" type="audio/wav"></audio></td>
-                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                  <source src="src/samples/rock_opera/2.mp3" type="audio/wav"></audio></td>
-                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                    <source src="src/samples/rock_opera/3.mp3" type="audio/wav"></audio></td>
-                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                      <source src="src/samples/rock_opera/4.mp3" type="audio/wav"></audio></td>
-    
-              </tbody>
-            </table>
-            <table>
-                      
-              <tbody>
-                <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
-                  <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "Chill lofi remix"</td>
-                </tr>
-                  <tr>
-                    <th>Style Condition</th>
-                    <th>Ex. 1</th>
-                    <th>Ex. 2</th>
-                    <th>Ex. 3</th>
-                    <th>Ex. 4</th>
-                  </tr>
       
-                          
-                  <tr style="border-top:1px solid black">
-                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                      <source src="src/samples/lofi_remix/cond.mp3" type="audio/wav"></audio></td>
-                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                      <source src="src/samples/lofi_remix/1.mp3" type="audio/wav"></audio></td>
-                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                        <source src="src/samples/lofi_remix/2.mp3" type="audio/wav"></audio></td>
-                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                          <source src="src/samples/lofi_remix/3.mp3" type="audio/wav"></audio></td>
-                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                            <source src="src/samples/lofi_remix/4.mp3" type="audio/wav"></audio></td>
-          
-                    </tbody>
-                  </table>
-
-                  <table>
-                      
-                    <tbody>
-                      <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
-                        <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "8-bit old video game music"</td>
-                      </tr>
-                        <tr>
-                          <th>Style Condition</th>
-                          <th>Ex. 1</th>
-                          <th>Ex. 2</th>
-                          <th>Ex. 3</th>
-                          <th>Ex. 4</th>
-                        </tr>
-            
-                                
-                        <tr style="border-top:1px solid black">
-                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                            <source src="src/samples/8bit/cond.mp3" type="audio/wav"></audio></td>
-                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                            <source src="src/samples/8bit/1.mp3" type="audio/wav"></audio></td>
-                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                              <source src="src/samples/8bit/2.mp3" type="audio/wav"></audio></td>
-                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                <source src="src/samples/8bit/3.mp3" type="audio/wav"></audio></td>
-                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="src/samples/8bit/4.mp3" type="audio/wav"></audio></td>
-                
-                          </tbody>
-                        </table>
-      
-                        <table>
-                      
-                          <tbody>
-                            <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
-                              <td colspan="5" style="text-align: center; font-weight: bold;"> Textual description: "Indian music with traditional instruments"</td>
-                            </tr>
-                              <tr>
-                                <th>Style Condition</th>
-                                <th>Ex. 1</th>
-                                <th>Ex. 2</th>
-                                <th>Ex. 3</th>
-                                <th>Ex. 4</th>
-                              </tr>
-                  
-                                      
-                              <tr style="border-top:1px solid black">
-                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="src/samples/indian/cond.mp3" type="audio/wav"></audio></td>
-                                <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                  <source src="src/samples/indian/1.mp3" type="audio/wav"></audio></td>
-                                  <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                    <source src="src/samples/indian/2.mp3" type="audio/wav"></audio></td>
-                                    <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                      <source src="src/samples/indian/3.mp3" type="audio/wav"></audio></td>
-                                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                        <source src="src/samples/indian/4.mp3" type="audio/wav"></audio></td>
-                      
-                                </tbody>
-                              </table>
-                              <table>
-                      
-                                <tbody>
-                                  <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
-                                    <td colspan="6" style="text-align: center; font-weight: bold;"> Textual description: "80s New Wave with synthesizer"</td>
-                                  </tr>
-                                    <tr>
-                                      <th>Style Condition</th>
-                                      <th>Ex. 1</th>
-                                      <th>Ex. 2</th>
-                                      <th>Ex. 3</th>
-                                      <th>Ex. 4</th>
-                                      <th>Ex. 5</th>
-                                    </tr>
-                        
-                                            
-                                    <tr style="border-top:1px solid black">
-                                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                        <source src="src/samples/indian/cond.mp3" type="audio/wav"></audio></td>
-                                      <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                        <source src="src/samples/newwave/1.mp3" type="audio/wav"></audio></td>
-                                        <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                          <source src="src/samples/newwave/2.mp3" type="audio/wav"></audio></td>
-                                          <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                            <source src="src/samples/newwave/3.mp3" type="audio/wav"></audio></td>
-                                            <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                              <source src="src/samples/newwave/4.mp3" type="audio/wav"></audio></td>
-                                              <td><audio controls="" class="audio-player" preload="metadata" style="width: 200px;">
-                                                <source src="src/samples/newwave/5.mp3" type="audio/wav"></audio></td>
-                              
-                                      </tbody>
-                                    </table>
                   
                   </div>
 
@@ -883,7 +997,6 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="./page_files/scrolling-nav.js"></script>
-
 
 
 </body></html>
